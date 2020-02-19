@@ -71,11 +71,3 @@ export default class Fecha {
     return `${this.diaSemana[this.fecha.getDay()]}`;
   }
 }
-
-let art1 = new Fecha(17, 2, 2019);
-console.log(art1.getFecha());
-console.log(art1.getDiaFecha());
-console.log(art1.getAños());
-console.log(art1.getDias());
-console.log(art1.getSemanas());
-console.log(art1.getMeses());
