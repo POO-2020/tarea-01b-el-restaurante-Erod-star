@@ -1,4 +1,4 @@
-import Precio from ".//precio.js";
+import Precio from "./precio.js";
 
 export default class Producto {
   /**

@@ -37,7 +37,7 @@ export default class Fecha {
     let x = Date.now() - this.fecha;
     let z = 1000 * 60 * 60 * 24 * 365;
     let fechaActual = Math.trunc(x / z);
-    return `La diferencia es de ${fechaActual} años`;
+    return `${fechaActual}`;
   }
 
   getMeses() {
@@ -45,27 +45,27 @@ export default class Fecha {
     let x = Date.now() - this.fecha;
     let z = 1000 * 60 * 60 * 24 * 7 * 4;
     let fechaActual = Math.trunc(x / z);
-    return `La diferencia es de ${fechaActual} meses`;
+    return `${fechaActual}`;
   }
 
   getSemanas() {
     let x = Date.now() - this.fecha;
     let z = 1000 * 60 * 60 * 24 * 7;
     let fechaActual = Math.trunc(x / z);
-    return `La diferencia es de ${fechaActual} semanas`;
+    return `${fechaActual}`;
   }
 
   getDias() {
     let x = Date.now() - this.fecha;
     let z = 1000 * 60 * 60 * 24;
     let fechaActual = Math.trunc(x / z);
-    return `La diferencia es de ${fechaActual} días`;
+    return `${fechaActual}`;
   }
 
   getFecha() {
     return `${this.fecha.getDate()}/${
       this.mes[this.fecha.getMonth()]
-    }/${this.fecha.getFullYear()}`;
+      }/${this.fecha.getFullYear()}`;
   }
   getDiaFecha() {
     return `${this.diaSemana[this.fecha.getDay()]}`;

@@ -2,7 +2,7 @@ export default class Tiempo {
   /**
    *
    * @param {number} hora | Número de la hora en que se encuentra 1 - 12
-   * @param {number} minutos | Número de minutos a los que se encuentra
+   * @param {number} minutos | Número de minutos a los que se encuentra 0 - 59
    * @param {string} periodo | El periodo en el que se encuentra (AM ó PM)
    */
   constructor(hora, minutos, periodo = "") {
@@ -44,7 +44,7 @@ export default class Tiempo {
     } else if (this.minutos > 59) {
       return "El valor de minutos agregado es incorrecto, ingresa un número del 0 al 59";
     } else {
-      if (this.periodo == "AM") {
+      if (this.periodo == "AM" || this.periodo == "am") {
         return `${this.hora}:${this.minutos} ${this.periodo}`;
       } else {
         return `${this.hora}:${this.minutos} ${this.periodo}`;
@@ -58,7 +58,7 @@ export default class Tiempo {
     } else if (this.minutos > 59) {
       return "El valor de minutos agregado es incorrecto, ingresa un número del 0 al 59";
     } else {
-      if (this.periodo == "AM") {
+      if (this.periodo == "AM" || this.periodo == "am") {
         return `${this.horaFormato24[this.hora]}:${this.minutos}`;
       } else {
         return `${this.horaFormato24[this.hora + 12]}:${this.minutos}`;
